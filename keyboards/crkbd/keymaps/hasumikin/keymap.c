@@ -50,6 +50,10 @@ enum macro_keycodes {
 
 #define KC_L_SPC LT(_LOWER, KC_SPC) // lower
 #define KC_R_ENT LT(_RAISE, KC_ENT) // raise
+#define KC_L_ALT LALT_T(KC_AT)   //
+#define KC_L_CTL LCTL_T(KC_EQL)  //
+#define KC_R_ALT RALT(KC_GRV)   //
+#define KC_R_GUI RGUI_T(KC_PIPE) //
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_split_3x6_3( \
@@ -60,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,KC_L_SPC, KC_RCTL,     KC_EQL,KC_R_ENT,   KC_AT\
+                                         KC_L_ALT,KC_L_CTL,KC_L_SPC,   KC_R_ENT,KC_R_ALT,KC_R_GUI\
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -73,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_0,    KC_1,    KC_2,    KC_3, KC_SLSH, KC_COMM,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,KC_L_SPC, KC_RCTL,     KC_EQL,   RAISE,   KC_AT\
+                                          _______, _______, _______,      RAISE, _______, _______\
                                       //`--------------------------'  `--------------------------'
     ),
 
@@ -85,19 +89,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, KC_RABK, KC_RCBR, KC_RBRC, KC_RPRN, KC_DQUO,                      KC_TILD, KC_BSLS, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,   LOWER, KC_RCTL,     KC_EQL,KC_R_ENT,   KC_AT\
+                                          _______, _______,   LOWER,    _______, _______, _______\
                                       //`--------------------------'  `--------------------------'
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        RESET,  RGBRST,    KC_W,    KC_E,    KC_R, XXXXXXX,                      XXXXXXX, XXXXXXX,    KC_I, XXXXXXX,    KC_P, KC_RGUI,\
+        RESET,  RGBRST, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RGUI,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX,    KC_L, XXXXXXX, XXXXXXX,\
+      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD,    KC_V, XXXXXXX,                      XXXXXXX,    KC_M, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, _______, KC_RCTL,     KC_EQL, _______,   KC_AT\
+                                          _______, _______, _______,    _______, _______, _______\
                                       //`--------------------------'  `--------------------------'
 )
 };
