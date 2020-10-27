@@ -38,6 +38,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
     #define RGBLIGHT_ANIMATIONS
+    #define GBLIGHT_EFFECT_ALTERNATING
+    #define GBLIGHT_EFFECT_BREATHING
+    #define GBLIGHT_EFFECT_CHRISTMAS
+    #define GBLIGHT_EFFECT_KNIGHT
+    #define GBLIGHT_EFFECT_RAINBOW_MOOD
+    #define GBLIGHT_EFFECT_RAINBOW_SWIRL
+    #define GBLIGHT_EFFECT_RGB_TEST
+    #define GBLIGHT_EFFECT_SNAKE
+    #define GBLIGHT_EFFECT_STATIC_GRADIENT
+    #define GBLIGHT_EFFECT_TWINKLE
     #define RGBLED_NUM 27
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 10
