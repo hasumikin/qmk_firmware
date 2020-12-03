@@ -52,7 +52,7 @@ enum macro_keycodes {
 #define KC_R_ENT LT(_RAISE, KC_ENT) // raise
 #define KC_L_ALT LALT_T(KC_AT)   //
 #define KC_L_CTL LCTL_T(KC_EQL)  //
-#define KC_R_CTL RCTL(KC_SPACE)  //
+#define KC_R_CTL RCTL_T(KC_SPACE)  //
 #define KC_R_GUI RGUI_T(KC_PIPE) //
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_0,    KC_1,    KC_2,    KC_3, KC_SLSH, KC_COMM,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______, _______,      RAISE, _______, RGB_TOG\
+                                          RGB_TOG, _______, _______,      RAISE, _______, _______\
                                       //`--------------------------'  `--------------------------'
     ),
 
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, KC_RABK, KC_RCBR, KC_RBRC, KC_RPRN, KC_DQUO,                      KC_TILD, KC_BSLS, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______,   LOWER,    _______, _______, _______\
+                                          _______, _______,   LOWER,    _______, _______, RGB_TOG\
                                       //`--------------------------'  `--------------------------'
   ),
 
