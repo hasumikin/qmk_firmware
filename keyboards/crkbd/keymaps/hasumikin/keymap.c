@@ -71,11 +71,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_MINS,\
+      _______,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, _______,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB,   KC_F2,  KC_F10,  KC_F11,  KC_F12, KC_ASTR,                       KC_DOT,    KC_4,    KC_5,    KC_6, KC_PLUS, KC_BSPC,\
+      _______,   KC_F2,  KC_F10,  KC_F11,  KC_F12, XXXXXXX,                      XXXXXXX, KC_PLUS, KC_ASTR,  KC_EQL, _______, _______,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_0,    KC_1,    KC_2,    KC_3, KC_SLSH, KC_COMM,\
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, _______, _______, _______, _______\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           RGB_TOG, _______, _______,      RAISE, _______, _______\
                                       //`--------------------------'  `--------------------------'
@@ -85,9 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_MINS,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB, KC_LABK, KC_LCBR, KC_LBRC, KC_LPRN, KC_QUOT,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_UNDS, KC_PIPE,\
+      _______, KC_LABK, KC_LCBR, KC_LBRC, KC_LPRN, KC_QUOT,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_UNDS, KC_PIPE,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_RABK, KC_RCBR, KC_RBRC, KC_RPRN, KC_DQUO,                      KC_TILD, KC_BSLS, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
+      _______, KC_RABK, KC_RCBR, KC_RBRC, KC_RPRN, KC_DQUO,                      KC_TILD, KC_BSLS, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______,   LOWER,    _______, _______, RGB_TOG\
                                       //`--------------------------'  `--------------------------'
